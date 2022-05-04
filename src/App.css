@@ -67,67 +67,67 @@ div.resource-card {
 .navbar {
   background: #a43f10;
 }
-.topbar-responsive {
+.navbar-responsive {
   background: #a43f10;
   padding: 0.1rem 0;
 }
 
-.topbar-responsive .topbar-responsive-logo {
+.navbar-responsive .navbar-responsive-logo {
   color: #fefefe;
   vertical-align: middle;
 }
 
-.topbar-responsive .menu {
+.navbar-responsive .menu {
   background: #a43f10;
 }
 
-.topbar-responsive .menu li:last-of-type {
+.navbar-responsive .menu li:last-of-type {
   margin-right: 0;
 }
 
-.topbar-responsive .menu a {
+.navbar-responsive .menu a {
   color: #fefefe;
   transition: color 0.15s ease-in;
 }
 
-.topbar-responsive .menu a:hover {
+.navbar-responsive .menu a:hover {
   color: #c6d1d8;
 }
 
 @media screen and (max-width: 39.9375em) {
-  .topbar-responsive .menu a {
+  .navbar-responsive .menu a {
     padding: 0.875rem 0;
   }
 }
 
-.topbar-responsive .menu .topbar-responsive-button {
+.navbar-responsive .menu .navbar-responsive-button {
   color: #fefefe;
   border-color: #333333;
   border-radius: 5000px;
   transition: color 0.15s ease-in, border-color 0.15s ease-in;
 }
 
-.topbar-responsive .menu .topbar-responsive-button:hover {
+.navbar-responsive .menu .navbar-responsive-button:hover {
   color: #c6d1d8;
   border-color: #c6d1d8;
 }
 
 @media screen and (max-width: 39.9375em) {
-  .topbar-responsive .menu .topbar-responsive-button {
+  .navbar-responsive .menu .navbar-responsive-button {
     width: 100%;
     margin: 0.875rem 0;
   }
 }
 
 @media screen and (max-width: 39.9375em) {
-  .topbar-responsive {
+  .navbar-responsive {
     padding: 0.75rem;
   }
-  .topbar-responsive .top-bar-title {
+  .navbar-responsive .nav-content {
     position: relative;
     width: 100%;
   }
-  .topbar-responsive .top-bar-title span {
+  .navbar-responsive .nav-content span {
     position: absolute;
     right: 0;
     border: 1px solid #fefefe;
@@ -138,8 +138,11 @@ div.resource-card {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  .topbar-responsive .top-bar-title span .menu-icon {
+  .navbar-responsive .nav-content span .menu-icon {
     margin-bottom: 4px;
+  }
+
+  .navbar-right #hidden {
   }
 }
 
@@ -184,7 +187,7 @@ div.resource-card {
 }
 
 @media screen and (max-width: 39.9375em) {
-  .topbar-responsive-links {
+  .navbar-responsive-links {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-duration: 0.5s;
@@ -197,9 +200,9 @@ div.resource-card {
 /** End of Nav Styling **/
 
 /** Footer Styling **/
-footer {
+.footer {
   background-color: #efefef;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 /** End of Footer Styling **/
 
@@ -217,14 +220,24 @@ button.button {
 
 button.button:hover {
   background: #333333;
+  color: #ffffff;
+}
+
+.button-filter {
+  background: #ffffff;
   border: 2px solid #333;
   border-radius: 5000px;
-  color: #ffffff;
+  color: #333333;
   font-family: "Lato";
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.825rem 1.5rem;
+  padding: 0.625rem 1.25rem;
 }
+.button-filter:hover,
+.button-filter:active {
+  background-color: #fbab17;
+}
+
 /** End of Button Styling **/
 
 /** Font Styling **/
@@ -254,7 +267,8 @@ p {
   font-weight: 300;
 }
 
-footer p {
+footer p,
+.small-text {
   font-size: 0.875rem;
   margin: 0;
 }

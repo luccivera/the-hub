@@ -14,6 +14,7 @@ export default function Resources() {
         <ResourceButtons />
         <ResourceButtons />
         <ResourceButtons />
+        <p className="small-text">Clear Filter</p>
       </div>
       <div className="resource-cards grid-x grid-margin-x grid-margin-y">
         <ResourceCard />

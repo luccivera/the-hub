@@ -1,23 +1,29 @@
+import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import logo from "../assets/imgs/logo-hr.png";
 
 export default function Navbar() {
+  let [showLinks, setShowLinks] = useState(true);
   return (
     <div className="navbar">
-      <nav className="top-bar topbar-responsive grid-container">
-        <div className="top-bar-title">
-          <span
-            data-responsive-toggle="topbar-responsive"
-            data-hide-for="medium"
-          >
-            <button className="menu-icon" type="button" data-toggle></button>
-          </span>
+      <nav className="top-bar navbar-responsive grid-container">
+        <div className="nav-content">
           <Link to="/">
             <img className="logo" src={logo} alt="Taibu Logo" />
           </Link>
+          <span
+            data-responsive-toggle="navbar-responsive"
+            className="show-for-small-only"
+          >
+            <button
+              className="menu-icon"
+              type="button"
+              onClick={() => setShowLinks(!showLinks)}
+            ></button>
+          </span>
         </div>
-        <div id="topbar-responsive" className="topbar-responsive-links">
-          <div className="top-bar-right">
+        <div id="navbar-responsive" className="navbar-responsive-links">
+          <div className="navbar-right" id={showLinks ? "hidden" : ""}>
             <ul className="menu simple vertical medium-horizontal">
               <li>
                 <Link to="/resources">Resources</Link>
@@ -28,7 +34,7 @@ export default function Navbar() {
               <li>
                 <button
                   type="button"
-                  className="button topbar-responsive-button"
+                  className="button navbar-responsive-button"
                 >
                   Support Us
                 </button>
