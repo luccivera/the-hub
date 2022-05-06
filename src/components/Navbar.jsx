@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
-import logo from "../assets/imgs/logo-hr.png";
+import logo from "../assets/imgs/logo-hr.svg";
 
 export default function Navbar() {
   let [showLinks, setShowLinks] = useState(true);
+
   return (
     <div className="navbar">
       <nav className="top-bar navbar-responsive grid-container">
